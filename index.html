@@ -7,31 +7,22 @@
   <title>Big Juicy Burger Token (BJB) — on Base</title>
   <meta name="description" content="BJB is a simple, tasty community token on the Base network. No nonsense — just good vibes, clean tokenomics, and a growing community.">
 
-  <!-- Favicon / icon -->
   <link rel="icon" href="./assets/bjb-icon-32.svg">
+  <link rel="stylesheet" href="./css/styles.css?v=3">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="./css/styles.css">
-
-  <!-- Open Graph / Twitter preview -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bigjuicyburger.com/">
   <meta property="og:title" content="Big Juicy Burger Token (BJB) — on Base">
   <meta property="og:description" content="BJB is a simple, tasty community token on the Base network. No nonsense — good vibes, clean tokenomics, and a growing community.">
-  <!-- Replace the image URL below when you have a 1200x630 preview image -->
-  <meta property="og:image" content="https://bigjuicyburger.com/assets/og-bjb.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://bigjuicyburger.com/assets/bjb-icon-32.svg">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Big Juicy Burger Token (BJB) — on Base">
   <meta name="twitter:description" content="BJB is a simple, tasty community token on the Base network.">
-  <meta name="twitter:image" content="https://bigjuicyburger.com/assets/og-bjb.jpg">
+  <meta name="twitter:image" content="https://bigjuicyburger.com/assets/bjb-icon-32.svg">
 </head>
 
 <body>
   <div class="container">
-
-    <!-- top bar -->
     <div class="nav">
       <div class="brand">
         <img src="./assets/bjb-icon-32.svg" alt="BJB">
@@ -42,10 +33,7 @@
       </div>
     </div>
 
-    <!-- main grid: left content + right chart -->
     <div class="grid">
-
-      <!-- LEFT: hero + details -->
       <section class="card" style="padding:0">
         <div class="hero-card">
           <div>
@@ -57,18 +45,9 @@
             </p>
 
             <div class="metrics" style="margin:14px 0 8px">
-              <div class="metric">
-                <div class="label">Symbol</div>
-                <div class="value">BJB</div>
-              </div>
-              <div class="metric">
-                <div class="label">Network</div>
-                <div class="value">Base</div>
-              </div>
-              <div class="metric">
-                <div class="label">Decimals</div>
-                <div class="value">18</div>
-              </div>
+              <div class="metric"><div class="label">Symbol</div><div class="value">BJB</div></div>
+              <div class="metric"><div class="label">Network</div><div class="value">Base</div></div>
+              <div class="metric"><div class="label">Decimals</div><div class="value">18</div></div>
             </div>
 
             <div style="display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 10px">
@@ -82,36 +61,20 @@
               0x63CF07827273B55FcE249eB59956101E0Bb6E7c5
             </div>
           </div>
-
-          <!-- You can drop a big logo/visual here if you’d like -->
           <div></div>
         </div>
 
         <div style="padding:18px 18px 22px">
           <h2>Details</h2>
-          <div class="kv">
-            <div>Chain</div>
-            <div>Base (chainId 8453)</div>
-          </div>
-          <div class="kv">
-            <div>Token address</div>
-            <div class="code">0x63CF07827273B55FcE249eB59956101E0Bb6E7c5</div>
-          </div>
+          <div class="kv"><div>Chain</div><div>Base (chainId 8453)</div></div>
+          <div class="kv"><div>Token address</div><div class="code">0x63CF07827273B55FcE249eB59956101E0Bb6E7c5</div></div>
           <div class="kv">
             <div>Uniswap</div>
-            <div>
-              <a href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x63cf07827273b55fce249eb59956101e0bb6e7c5" target="_blank" rel="noopener">
-                https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x63cf07827273b55fce249eb59956101e0bb6e7c5
-              </a>
-            </div>
+            <div><a href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x63cf07827273b55fce249eb59956101e0bb6e7c5" target="_blank" rel="noopener">https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x63cf07827273b55fce249eb59956101e0bb6e7c5</a></div>
           </div>
           <div class="kv">
             <div>Dexscreener</div>
-            <div>
-              <a href="https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB" target="_blank" rel="noopener">
-                https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB
-              </a>
-            </div>
+            <div><a href="https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB" target="_blank" rel="noopener">https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB</a></div>
           </div>
           <div class="kv">
             <div>Basescan</div>
@@ -124,23 +87,16 @@
 
           <div class="links">
             <a class="btn secondary" href="./docs/tokenomics.html">Tokenomics</a>
-            <a class="btn secondary" href="#live">Live Chart</a>
+            <a class="btn secondary" href="./charts/">Live Chart</a>
             <a class="btn secondary" href="./lists/bjb.tokenlist.json">Tokenlist JSON</a>
             <button class="btn secondary" id="btnCopy2">Copy address</button>
           </div>
         </div>
       </section>
 
-      <!-- RIGHT: live chart -->
       <aside class="live-panel" id="live">
         <h2 style="margin-bottom:10px">Live Chart</h2>
-        <!-- Dexscreener embed -->
-        <iframe
-          src="https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB?embed=1&theme=dark"
-          title="Dexscreener"
-          loading="lazy"
-          allow="clipboard-write; fullscreen">
-        </iframe>
+        <iframe src="https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB?embed=1&theme=dark" title="Dexscreener" loading="lazy" allow="clipboard-write; fullscreen"></iframe>
         <p class="note">Data by Dexscreener.</p>
       </aside>
 
@@ -149,39 +105,6 @@
     <footer>© 2025 BJB — not financial advice.</footer>
   </div>
 
-  <script>
-    // Copy contract address
-    const ADDRESS = "0x63CF07827273B55FcE249eB59956101E0Bb6E7c5";
-    const copy = async () => {
-      try {
-        await navigator.clipboard.writeText(ADDRESS);
-        const el = document.getElementById('codeAddress');
-        const old = el.textContent;
-        el.textContent = '✓ Copied';
-        setTimeout(() => (el.textContent = old), 1200);
-      } catch {}
-    };
-    document.getElementById('btnCopy')?.addEventListener('click', copy);
-    document.getElementById('btnCopy2')?.addEventListener('click', copy);
-
-    // Add token to MetaMask
-    document.getElementById('btnAddMM')?.addEventListener('click', async () => {
-      if (!window.ethereum) return;
-      try {
-        await window.ethereum.request({
-          method: 'wallet_watchAsset',
-          params: {
-            type: 'ERC20',
-            options: {
-              address: ADDRESS,
-              symbol: 'BJB',
-              decimals: 18,
-              image: 'https://bigjuicyburger.com/assets/bjb-icon-32.svg'
-            }
-          }
-        });
-      } catch {}
-    });
-  </script>
+  <script src="./js/app.js"></script>
 </body>
 </html>

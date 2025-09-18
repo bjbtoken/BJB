@@ -1,2 +1,30 @@
+// BJBCoin site helpers
+(function(){
+  const ADDRESS = "0x63CF07827273B55FcE249eB59956101E0Bb6E7c5";
 
-function copyText(id){const el=document.getElementById(id);if(!el)return;const t=el.textContent.trim();navigator.clipboard.writeText(t).then(()=>{const b=document.getElementById('copied');if(b){b.style.opacity=1;setTimeout(()=>b.style.opacity=0,1200);}});}
+  async function copyAddress(){
+    try{
+      await navigator.clipboard.writeText(ADDRESS);
+      const el = document.getElementById('codeAddress');
+      if(el){
+        const old = el.textContent;
+        el.textContent = '✓ Copied';
+        setTimeout(()=>{ el.textContent = old; }, 1200);
+      }
+    }catch(e){}
+  }
+
+  async function addToMetaMask(){
+    if(!window.ethereum) { alert('Open this in a browser with MetaMask.'); return; }
+    try{
+      await window.ethereum.request({
+        method: 'wallet_watchAsset',
+        params: { type: 'ERC20', options: { address: ADDRESS, symbol: 'BJB', decimals: 18, image: '/assets/bjb-icon-32.svg' } }
+      });
+    }catch(e){}
+  }
+
+  document.getElementById('btnCopy')?.addEventListener('click', copyAddress);
+  document.getElementById('btnCopy2')?.addEventListener('click', copyAddress);
+  document.getElementById('btnAddMM')?.addEventListener('click', addToMetaMask);
+})();

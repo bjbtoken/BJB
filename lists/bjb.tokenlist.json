@@ -1,25 +1,20 @@
 {
-  "name": "BJB Token List",
-  "timestamp": "2025-09-18T15:56:37Z",
-  "version": {
-    "major": 1,
-    "minor": 0,
-    "patch": 4
-  },
-  "logoURI": "/assets/bjb-icon-64.svg",
-  "keywords": [
-    "BJB",
-    "Base",
-    "BJBCoin"
-  ],
+  "name": "BJB Tokenlist",
+  "logoURI": "https://bigjuicyburger.com/assets/bjb-icon-32.svg",
+  "timestamp": "2025-09-18T21:45:11Z",
   "tokens": [
     {
       "chainId": 8453,
       "address": "0x63CF07827273B55FcE249eB59956101E0Bb6E7c5",
-      "name": "BJBCoin",
+      "name": "Big Juicy Burger",
       "symbol": "BJB",
       "decimals": 18,
-      "logoURI": "/assets/bjb-icon-64.svg"
+      "logoURI": "https://bigjuicyburger.com/assets/bjb-icon-32.svg"
     }
-  ]
+  ],
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
 }
