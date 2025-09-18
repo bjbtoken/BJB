@@ -123,7 +123,7 @@ p{ margin: 10px 0; }
 }
 @media (min-width: 980px){
   .grid{
-    grid-template-columns: 1.1fr .9fr;  /* left content + live chart panel */
+    grid-template-columns: 1fr 560px; /* wider, fixed chart column */
     align-items: start;
   }
 }
