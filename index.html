@@ -3,151 +3,164 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Big Juicy Burger • BJBToken (BJB)</title>
-  <meta name="description" content="BJB is a simple, tasty community token on Base. No nonsense — just good vibes, clean tokenomics, and a growing community."/>
+  <title>Big Juicy Burger Token (BJB) • Base</title>
+  <meta name="description" content="BJB is a simple, tasty community token on the Base network. No nonsense — just good vibes, clean tokenomics, and a growing community."/>
   <link rel="icon" href="./assets/bjb-icon-32.svg">
   <link rel="stylesheet" href="./css/styles.css">
-
-  <style>
-    /* Page-specific layout so it resembles bigjuicyburger.com */
-    .hero { text-align:center; padding:28px 12px; }
-    .hero h1 { font-size:2.2rem; margin:.2em 0 .4em; }
-    .cta-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin:10px 0 14px; }
-    .stats { display:grid; grid-template-columns:repeat(3, minmax(120px,1fr)); gap:10px; margin:16px auto; max-width:680px; }
-    .stat { background:#141825; border:1px solid #242a3b; border-radius:12px; padding:10px; text-align:center; }
-    .section { margin:26px auto; max-width:880px; }
-    .section h2 { margin:0 0 10px; }
-    .list { background:#141825; border:1px solid #242a3b; border-radius:12px; padding:14px; }
-    .list ol { margin:0; padding-left:22px; }
-    .footer { text-align:center; opacity:.85; margin:24px 0 8px; }
-    .nav-inline { display:flex; gap:12px; align-items:center; }
-    .nav-inline a { text-decoration:none; }
-    .muted { color:#9aa8b9; }
-    .btn.small { padding:8px 12px; font-weight:700; border-radius:10px; }
-    .btn.linkish { background:#1b2133; color:#e9eef6; }
-    .code{ display:inline-block; padding:6px 8px; background:#0b0d13; border:1px solid #242a3b; border-radius:8px; word-break:break-all; }
-    .kv{ display:grid; grid-template-columns:140px auto; gap:8px; margin:8px 0; }
-    @media (max-width:640px){ .stats{ grid-template-columns:1fr 1fr; } .kv{ grid-template-columns:1fr; } }
-  </style>
 </head>
 <body>
   <div class="container">
-    <!-- Top bar -->
+
+    <!-- Top nav -->
     <div class="nav">
-      <div class="nav-inline">
-        <img src="./assets/bjb-icon-32.svg" alt="BJB" width="32" height="32">
+      <div class="brand">
+        <img src="./assets/bjb-icon-32.svg" alt="BJB">
         <strong>BJBToken</strong>
       </div>
-      <div class="nav-inline">
-        <a class="btn linkish small" href="#how-to-buy">How to Buy</a>
-        <a class="btn linkish small" href="#token">Token</a>
-        <a class="btn small" target="_blank" rel="noopener" href="https://basescan.org/token/0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">BaseScan</a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="https://app.uniswap.org/swap?chain=base&outputCurrency=0x63CF07827273B55FcE249eB59956101E0Bb6E7c5" target="_blank" rel="noopener">Buy on Uniswap</a>
+        <a class="btn secondary" href="./links/">Links</a>
       </div>
     </div>
 
-    <!-- Hero -->
-    <div class="hero">
-      <div class="muted">WELCOME TO</div>
-      <h1>Big Juicy Burger Token</h1>
-      <p class="muted" style="max-width:740px;margin:0 auto">
-        BJB is a simple, tasty community token on the Base network. No nonsense — just good vibes, clean tokenomics, and a growing community.
-      </p>
+    <!-- Main grid: left content + right chart -->
+    <div class="grid">
 
-      <div class="cta-row">
-        <a class="btn" id="addMetaMask" href="javascript:void(0)">Add BJB to MetaMask</a>
-        <a class="btn linkish" id="copyContract" href="javascript:void(0)">Copy Contract</a>
-        <a class="btn linkish" target="_blank" rel="noopener" href="https://basescan.org/token/0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">View on BaseScan</a>
-      </div>
+      <!-- LEFT column -->
+      <section class="card">
 
-      <div class="muted" id="token">
-        Contract: <span class="code" id="tokenAddr">0x63CF07827273B55FcE249eB59956101E0Bb6E7c5</span>
-      </div>
-    </div>
+        <!-- Hero intro -->
+        <div class="hero-card">
+          <div>
+            <p class="muted" style="margin-bottom:6px">WELCOME TO</p>
+            <h1>Big Juicy Burger Token</h1>
+            <p class="muted" style="margin-top:10px">
+              BJB is a simple, tasty community token on the Base network. No nonsense — just good vibes,
+              clean tokenomics, and a growing community.
+            </p>
 
-    <!-- Quick stats -->
-    <div class="stats">
-      <div class="stat"><div class="muted">Symbol</div><div><strong>BJB</strong></div></div>
-      <div class="stat"><div class="muted">Network</div><div><strong>Base</strong></div></div>
-      <div class="stat"><div class="muted">Decimals</div><div><strong>18</strong></div></div>
-    </div>
+            <div class="links" style="margin-top:14px">
+              <a class="btn" href="javascript:void(0)" onclick="addToMetaMask()">Add BJB to MetaMask</a>
+              <a class="btn secondary" href="javascript:void(0)" onclick="copyText('token')">Copy Contract</a>
+              <a class="btn secondary" target="_blank" rel="noopener"
+                 href="https://basescan.org/token/0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">View on BaseScan</a>
+            </div>
 
-    <!-- Tokenomics -->
-    <div class="section" id="tokenomics">
-      <h2>Tokenomics</h2>
-      <div class="list">
-        <div class="kv"><div>Total Supply</div><div><strong>1,000,000 BJB</strong></div></div>
-        <div class="kv"><div>Tax</div><div><strong>0% buy / 0% sell</strong></div></div>
-        <div class="kv"><div>Contract</div><div class="code">0x63CF07827273B55FcE249eB59956101E0Bb6E7c5</div></div>
-      </div>
-    </div>
+            <div class="code" id="token" style="margin-top:10px">0x63CF07827273B55FcE249eB59956101E0Bb6E7c5</div>
+          </div>
 
-    <!-- How to Buy -->
-    <div class="section" id="how-to-buy">
-      <h2>How to Buy (Base)</h2>
-      <div class="list">
-        <ol>
-          <li>Install <a href="https://metamask.io" target="_blank" rel="noopener">MetaMask</a> and select the Base network.</li>
-          <li>Fund your wallet with a little ETH on Base for gas (bridge from Ethereum if needed).</li>
-          <li>Click “Add BJB to MetaMask” above, or import the token manually using the address.</li>
-          <li>Swap on your preferred Base DEX (e.g., <a href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x63cf07827273b55fce249eb59956101e0bb6e7c5" target="_blank" rel="noopener">Uniswap</a>).</li>
-        </ol>
-      </div>
-    </div>
+          <!-- Metric tiles -->
+          <div class="metrics">
+            <div class="metric">
+              <div class="label">Symbol</div>
+              <div class="value">BJB</div>
+            </div>
+            <div class="metric">
+              <div class="label">Network</div>
+              <div class="value">Base</div>
+            </div>
+            <div class="metric">
+              <div class="label">Decimals</div>
+              <div class="value">18</div>
+            </div>
+          </div>
+        </div>
 
-    <!-- Roadmap -->
-    <div class="section" id="roadmap">
-      <h2>Roadmap (Short &amp; Sweet)</h2>
-      <div class="list">
-        <p><strong>Phase 1</strong><br/>Launch site + socials + token verification.</p>
-        <p><strong>Phase 2</strong><br/>Community giveaways, listings, light partnerships.</p>
-        <p><strong>Phase 3</strong><br/>Ecosystem integrations and simple utilities.</p>
-      </div>
-    </div>
+        <!-- Key facts -->
+        <h2 style="margin-top:18px">Details</h2>
+        <div class="kv"><div>Chain</div><div>Base (chainId 8453)</div></div>
+        <div class="kv"><div>Token address</div><div class="code">0x63CF07827273B55FcE249eB59956101E0Bb6E7c5</div></div>
+        <div class="kv">
+          <div>Uniswap</div>
+          <div>
+            <a target="_blank" rel="noopener"
+               href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">
+              https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x63CF07827273B55FcE249eB59956101E0Bb6E7c5
+            </a>
+          </div>
+        </div>
+        <div class="kv">
+          <div>Dexscreener</div>
+          <div>
+            <a target="_blank" rel="noopener"
+               href="https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB">
+               https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB
+            </a>
+          </div>
+        </div>
+        <div class="kv">
+          <div>Basescan</div>
+          <div>
+            <a target="_blank" rel="noopener"
+               href="https://basescan.org/token/0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">Token</a>
+            &nbsp;·&nbsp;
+            <a target="_blank" rel="noopener"
+               href="https://basescan.org/address/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB">Pair</a>
+          </div>
+        </div>
 
-    <!-- Footer -->
-    <div class="footer">
-      <p>© Big Juicy Burger • BJBToken</p>
-      <p>
-        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a> ·
-        <a href="https://t.me/BJBToken" target="_blank" rel="noopener">Telegram</a> ·
-        <a href="mailto:hello@bigjuicyburger.com">Email</a>
-      </p>
-    </div>
-  </div>
+        <!-- Quick links -->
+        <div id="copied" class="muted" style="opacity:0;transition:.2s;margin-top:10px">✓ Copied</div>
+        <div class="links">
+          <a class="btn secondary" href="./docs/tokenomics.html">Tokenomics</a>
+          <a class="btn secondary" href="./charts/">Live Chart</a>
+          <a class="btn secondary" href="./lists/bjb.tokenlist.json">Tokenlist JSON</a>
+          <a class="btn secondary" href="javascript:void(0)" onclick="copyText('token')">Copy address</a>
+        </div>
+
+        <footer>© 2025 BJB — not financial advice.</footer>
+      </section>
+
+      <!-- RIGHT column: live chart -->
+      <aside class="live-panel">
+        <section class="card">
+          <h2>Live Chart</h2>
+          <iframe
+            src="https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB?embed=1&theme=dark"
+            allowtransparency="true"
+            loading="lazy"></iframe>
+          <p class="note">Data by Dexscreener.</p>
+        </section>
+      </aside>
+
+    </div><!-- /grid -->
+  </div><!-- /container -->
 
   <script>
-    // Copy contract
-    (function(){
-      const btn = document.getElementById('copyContract');
-      const addrEl = document.getElementById('tokenAddr');
-      btn && btn.addEventListener('click', async () => {
-        try{
-          await navigator.clipboard.writeText(addrEl.textContent.trim());
-          btn.textContent = 'Copied!';
-          setTimeout(()=>btn.textContent='Copy Contract', 1200);
-        }catch(e){ console.error(e); }
-      });
-    })();
+    // Copy helper
+    function copyText(id){
+      try{
+        const el = document.getElementById(id);
+        const txt = el ? (el.innerText || el.textContent) : '';
+        if(!txt) return;
+        navigator.clipboard.writeText(txt).then(()=>{
+          const n = document.getElementById('copied');
+          if(n){ n.style.opacity = 1; setTimeout(()=>{ n.style.opacity = 0; }, 1200); }
+        });
+      }catch(e){}
+    }
 
-    // Add to MetaMask (EIP-747)
-    (function(){
+    // MetaMask "Add Token"
+    async function addToMetaMask(){
       const tokenAddress = '0x63CF07827273B55FcE249eB59956101E0Bb6E7c5';
-      const tokenSymbol  = 'BJB';
-      const tokenDecimals = 18;
-      const tokenImage = './assets/bjb-icon-64.svg';
-
-      const btn = document.getElementById('addMetaMask');
-      btn && btn.addEventListener('click', async () => {
-        try{
-          if (!window.ethereum) { alert('Open in a wallet-enabled browser to add the token.'); return; }
-          const wasAdded = await window.ethereum.request({
-            method: 'wallet_watchAsset',
-            params: { type: 'ERC20', options: { address: tokenAddress, symbol: tokenSymbol, decimals: tokenDecimals, image: tokenImage } }
-          });
-          if(!wasAdded){ /* user rejected */ }
-        }catch(e){ console.error(e); }
-      });
-    })();
+      if(!window.ethereum) return alert('Open this in a browser with MetaMask.');
+      try{
+        await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: tokenAddress,
+              symbol: 'BJB',
+              decimals: 18,
+              image: location.origin + location.pathname.replace(/\/[^/]*$/, '') + '/assets/bjb-icon-32.svg'
+            }
+          }
+        });
+      }catch(e){
+        console.log(e);
+      }
+    }
   </script>
 </body>
 </html>
