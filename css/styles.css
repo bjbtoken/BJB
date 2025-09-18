@@ -95,3 +95,39 @@ footer{ margin-top: 26px; color: var(--muted); font-size: 13px; text-align: cent
   .brand img{ width:36px; height:36px; }
   .btn{ width: 100%; }
 }
+/* ========== BJB quick layout fix (append at end) ========== */
+
+/* Keep cards from spilling and keep shadows clean */
+.card { overflow: hidden; }
+
+/* Inline “Details” card inside the hero: small spacing */
+.hero-card .card { margin-top: 16px; }
+
+/* Desktop/tablet layout */
+@media (min-width: 1100px) {
+  /* Main two-column layout: content + chart */
+  .grid {
+    grid-template-columns: minmax(0, 1fr) 420px; /* left grows, right fixed */
+    gap: 22px;
+  }
+
+  /* Hero section: text + logo */
+  .hero-card {
+    grid-template-columns: minmax(0, 1fr) 320px; /* keep logo column narrow */
+    align-items: start;
+  }
+
+  /* Constrain the logo so it can’t push content */
+  .hero-card img {
+    max-width: 320px !important;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Give the embedded chart a bit more height on desktop */
+  .live-panel iframe {
+    height: 680px !important;
+  }
+}
+
+/* Mobile stacking still uses your existing rules */
