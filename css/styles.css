@@ -131,3 +131,26 @@ footer{ margin-top: 26px; color: var(--muted); font-size: 13px; text-align: cent
 }
 
 /* Mobile stacking still uses your existing rules */
+/* ===== Details card: full width + no clipping ===== */
+
+/* If your Details section has class "details" or "details-card",
+   make it span both columns and allow overflow to be visible. */
+.details,
+.details-card {
+  grid-column: 1 / -1;
+  overflow: visible;
+}
+
+/* Let long addresses/URLs wrap instead of being cut */
+.details .kv .code,
+.details .kv a,
+.details .kv input,
+.details .kv span {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Give the left content a touch more room on desktop by slimming the chart */
+@media (min-width: 1100px){
+  .grid { grid-template-columns: minmax(0, 1fr) 380px; }
+}
