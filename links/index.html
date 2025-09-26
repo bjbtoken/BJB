@@ -6,29 +6,61 @@
   <title>BJB • Official Links</title>
   <link rel="icon" href="../assets/bjb-icon-32.svg">
   <link rel="stylesheet" href="../css/styles.css?v=3">
+  <meta name="robots" content="index,follow">
 </head>
 <body>
   <div class="container">
+    <!-- Top nav -->
     <div class="nav">
-      <div class="brand"><img src="../assets/bjb-icon-32.svg" alt="BJB"><strong>BJBToken</strong></div>
+      <div class="brand" style="display:flex;align-items:center;gap:8px">
+        <img src="../assets/bjb-icon-32.svg" alt="BJB" width="20" height="20">
+        <strong>BJBToken</strong>
+      </div>
       <div style="display:flex; gap:10px; flex-wrap:wrap">
-        <a class="btn" target="_blank" rel="noopener"
-           href="https://app.uniswap.org/swap?chain=base&outputCurrency=0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">Buy on Uniswap</a>
+        <a class="btn" target="_blank" rel="noopener noreferrer"
+           href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">
+          Buy on Uniswap
+        </a>
       </div>
     </div>
 
+    <!-- Main card -->
     <section class="card">
       <h1>Official Links</h1>
-      <div class="links">
-        <a class="btn secondary" target="_blank" rel="noopener" href="https://t.me/BJBToken">Telegram Channel</a>
-        <a class="btn secondary" target="_blank" rel="noopener" href="https://t.me/BJBTokenChat">Telegram Chat</a>
-        <a class="btn secondary" target="_blank" rel="noopener" href="https://x.com/BJBToken">X (Twitter)</a>
-        <a class="btn secondary" target="_blank" rel="noopener" href="https://app.uniswap.org/swap?chain=base&outputCurrency=0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">Uniswap</a>
-        <a class="btn secondary" target="_blank" rel="noopener" href="https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB">Dexscreener</a>
-        <a class="btn secondary" target="_blank" rel="noopener" href="https://basescan.org/token/0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">BaseScan</a>
+
+      <div class="links" style="display:flex;flex-wrap:wrap;gap:10px">
+        <!-- Social -->
+        <a class="btn secondary" target="_blank" rel="noopener noreferrer" href="https://t.me/BJBToken">Telegram Channel</a>
+        <a class="btn secondary" target="_blank" rel="noopener noreferrer" href="https://t.me/BJBTokenChat">Telegram Chat</a>
+        <a class="btn secondary" target="_blank" rel="noopener noreferrer" href="https://x.com/BJBToken">X (Twitter)</a>
+
+        <!-- Trading / Analytics -->
+        <a class="btn secondary" target="_blank" rel="noopener noreferrer"
+           href="https://app.uniswap.org/swap?chain=base&inputCurrency=ETH&outputCurrency=0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">
+          Uniswap
+        </a>
+
+        <a class="btn secondary" target="_blank" rel="noopener noreferrer"
+           href="https://dexscreener.com/base/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB">
+          Dexscreener
+        </a>
+
+        <!-- BaseScan: token + pool (pair) -->
+        <a class="btn secondary" target="_blank" rel="noopener noreferrer"
+           href="https://basescan.org/token/0x63CF07827273B55FcE249eB59956101E0Bb6E7c5">
+          BaseScan (Token)
+        </a>
+
+        <a class="btn secondary" target="_blank" rel="noopener noreferrer"
+           href="https://basescan.org/address/0xC9851E75fF1f9737407eae4949F9410dD64E6ddB">
+          BaseScan (Pair)
+        </a>
+
+        <!-- Dev -->
         <a class="btn secondary" href="../lists/bjb.tokenlist.json">Tokenlist JSON</a>
       </div>
-      <footer>© 2025 BJB — not financial advice.</footer>
+
+      <footer style="margin-top:16px">© 2025 BJB — not financial advice.</footer>
     </section>
   </div>
 </body>
